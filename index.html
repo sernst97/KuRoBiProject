@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+	
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.7.3/nipplejs.js"></script>
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" type="text/javascript">
+
+</head>
+<style>
+body{
+    background-color: black;
+    }
+h1{ color: white}
+p{ color: white}
+h2 { color: white}
+</style>
+<body>
+  <h1>Henry Remote Control</h1>
+  <p>Connection status: <span id="status"></span></p>
+  <p>Last /txt_msg received: <span id="msg"></span></p>
+  <div class="container">
+  <h2>Welchen Roboter möchtest du bewegen?</h2>
+  <p>Wähle im folgenden Dropdown Menü den Roboter aus, den du mit dem Joystick bewegen willst.</p>
+  </div>
+  <section>
+        <div class="moving"></div>
+        <select class="selectWhatsMoving" onchange="changeMoving(this)">
+            <option value="/turtle1/cmd_vel">Turtlesim</option>
+            <option value="/cmd_vel">Volksbot</option>
+        </select>
+    </section>
+  <div id="zone_joystick" style="position: relative;"></div>
+</body>
+</html>
